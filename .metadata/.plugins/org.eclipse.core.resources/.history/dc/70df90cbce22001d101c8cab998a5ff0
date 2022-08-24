@@ -1,0 +1,11 @@
+package org.java;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Drawable d = (String name)->{System.out.println(name);};
+		d.draw("bonjour Ahmed");
+	}
+
+}

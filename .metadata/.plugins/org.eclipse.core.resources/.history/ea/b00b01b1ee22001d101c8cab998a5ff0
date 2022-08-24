@@ -1,0 +1,14 @@
+package org.java;
+
+@FunctionalInterface
+public interface Drawable {
+	public abstract void draw(String name);
+	
+	public default int addiction(int a,int b) {
+		return a+b;
+	}
+	
+	public static int soustraction(int a,int b) {
+		return a-b;
+	}
+}

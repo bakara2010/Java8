@@ -1,0 +1,6 @@
+package org.java;
+
+@FunctionalInterface
+public interface Drawable {
+	public abstract void sayHello(String name);
+}

@@ -1,0 +1,26 @@
+package org.java;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Expressions Lambda
+		Drawable d = (String object)->{System.out.println("Draw "+object);};
+		d.draw("anim");
+		System.out.println(d.addiction(2, 3));
+		System.out.println(Drawable.soustraction(2, 3));
+		
+		//Références de méthode
+		Drawable dd=MyClass::show;
+		dd.draw("rachid");
+	}
+
+}
+
+
+//Références de méthode
+class MyClass{
+	public static void show(String object){
+		System.out.println(object);
+	}
+}

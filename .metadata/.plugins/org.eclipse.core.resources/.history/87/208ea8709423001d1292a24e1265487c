@@ -1,0 +1,54 @@
+package org.java;
+
+import java.util.Optional;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//2 Expressions Lambda
+		System.out.println("//2 Expressions Lambda");
+		Drawable d1 = (String object)->{System.out.println("Draw "+object);};
+		d1.draw("anim");
+		System.out.println(d1.addiction(2, 3));
+		System.out.println(Drawable.soustraction(2, 3));
+		
+		//3 Références de méthode
+		System.out.println("//3 Références de méthode");
+		Drawable d2=MyClass::show;
+		d2.draw("New object1");
+		//
+		Drawable d3=MyClass::new;
+		d3.draw("New object2");
+		
+		//4 Optional
+		System.out.println("//4 Optional");
+		OptionalExample.show(1);
+		OptionalExample.show(2);
+	}
+}
+
+//3 Références de méthode
+class MyClass{
+	MyClass(String object){
+		System.out.println(object);
+	}
+	public static void show(String object){
+		System.out.println(object);
+	}
+}
+
+//4 Optional
+class OptionalExample{
+	static void show(int indice) {
+		String [] str=new String[5];
+		str[1]="hello";
+		Optional<String> isNull = Optional.ofNullable(str[indice]);
+		if(isNull.isPresent()) {
+			System.out.println(str[indice].trim());
+		}
+		else {
+			System.out.println("The value is null");
+		}
+	}
+}

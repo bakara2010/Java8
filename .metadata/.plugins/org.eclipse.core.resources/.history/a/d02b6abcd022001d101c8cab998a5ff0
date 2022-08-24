@@ -1,0 +1,12 @@
+package org.java;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Drawable d = (String object)->{System.out.println("Draw "+object);};
+		d.draw("anim");
+		System.out.println(d.addiction(2, 3));
+	}
+
+}
