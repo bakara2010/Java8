@@ -6,7 +6,6 @@ public interface Drawable {
 	
 	public void draw(String name);
 	
-	// 7 Méthodes par défaut
 	public default int addiction(int a,int b) {
 		return a+b;
 	}
