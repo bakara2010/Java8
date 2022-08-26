@@ -53,34 +53,25 @@ public class Main {
 	    System.out.println("in formatted manner "+
 	                        formatedDateTime);
 		//8 API Stream
-	    
 	    //Map
 	    System.out.println("//8 API Stream");
 	    System.out.println("Map");
-	    List<Integer> list = Arrays.asList(1, 5, 3, 4, 2); 
-        list.stream().map(x ->{int a=x+1;a = a*5;return a;}).forEach(System.out::println);
-        
+	    List<Integer> list = Arrays.asList(1, 2, 3, 4, 5); 
+        list.stream().map(x -> x + 1).forEach(System.out::println);
         //filter()
         System.out.println("filter()");
         list.stream().filter(num -> num%2 == 0 ).forEach(System.out::println);
-        
         //sorted()
         System.out.println("sorted()");
          list.stream().sorted().forEach(System.out::println); 
-         
         //collect()
         List<Integer> pair = list.stream()
                 .filter(x -> x % 2 == 0)
                 .collect(Collectors.toList());
         System.out.println("collect() "+pair);
-        
         //reduce()
         int somme = list.stream().reduce(0, (a, b) -> a + b);
         System.out.println("reduce() "+somme);
-        
-        //all
-        System.out.println("all");
-        list.stream().filter(x->x%2==0).map(x ->{int a=x+1;a = a*5;return a;}).sorted().forEach(System.out::println);
 	}
 }
 

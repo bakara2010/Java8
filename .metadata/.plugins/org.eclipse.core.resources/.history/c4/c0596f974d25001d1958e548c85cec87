@@ -77,10 +77,6 @@ public class Main {
         //reduce()
         int somme = list.stream().reduce(0, (a, b) -> a + b);
         System.out.println("reduce() "+somme);
-        
-        //all
-        System.out.println("all");
-        list.stream().filter(x->x%2==0).map(x ->{int a=x+1;a = a*5;return a;}).sorted().forEach(System.out::println);
 	}
 }
 
