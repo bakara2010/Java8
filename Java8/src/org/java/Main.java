@@ -80,7 +80,13 @@ public class Main {
         
         //all
         System.out.println("all");
-        list.stream().filter(x->x%2==0).map(x ->{int a=x+1;a = a*5;return a;}).sorted().forEach(System.out::println);
+        list.stream()
+        	.filter(x->x%2!=0)
+        	.sorted()
+        	.collect(Collectors.toList())
+        	.stream()
+        	.map( x->{int y=3; return "SUM OF  "+x+"+"+y+"=" +(x+y);})
+        	.forEach(System.out::println);
 	}
 }
 
